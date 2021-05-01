@@ -16,21 +16,31 @@ app.secret_key = "demosecretkey"
 def show_homepage():
     """Display homepage"""
 
-    return render_template('home.html')
+    # TODO: Need to write crud function 
+    destinations = crud.return_destinations()
+    
+    return render_template('home.html', destinations=destinations)
 
 
-@app.route('/gallery')
-def show_gallery():
-    """Display image gallery"""
+@app.route('/destination/<destination_id>')
+def show_gallery(destination_id):
+    """Display page for each destination with images"""
 
-    return render_template('gallery.html')
+    # TODO: Need to write this crud function 
+    destination = crud.get_destination_by_id(destination_id)
+    destination_images = crud.get_images_by_destination(destination)
+
+    return render_template('destination-details.html', destination=destination,
+                                                       destination_images=destination_images)
 
 
 @app.route('/add')
 def add_images():
     """Display page for visitors to upload images"""
 
-    return render_template('add.html')
+    destinations = crud.return_destinations()
+
+    return render_template('add.html', destinations=destinations)
 
 
 

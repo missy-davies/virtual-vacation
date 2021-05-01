@@ -28,16 +28,16 @@ class FlaskTestBasic(TestCase):
 
         result = self.client.get('/')
         self.assertEqual(result.status_code, 200)
-        self.assertIn(b'Share your best destination photos and inspire others', result.data)
+        self.assertIn(b'Browse photo collections by destination and get inspiration for your next trip', result.data)
 
 
-    def test_gallery(self):
-        """Test displaying gallery page"""
+    def test_destination(self):
+        """Test displaying destinations page"""
 
-        result = self.client.get('/gallery')
+        result = self.client.get('/destination')
         self.assertEqual(result.status_code, 200)
-        self.assertIn(b'Gallery', result.data)
-
+        self.assertIn(b'ADD SOMETHING HERE', result.data)
+        # TODO: Add text to check above 
 
     def test_add_images(self):
         """Test displaying add images page"""
@@ -45,7 +45,7 @@ class FlaskTestBasic(TestCase):
         result = self.client.get('/add')
         self.assertEqual(result.status_code, 200)
         self.assertIn(b'Add Images', result.data)
-
+        # TODO: To update
 
 #------------------------------------------------------------------#
 

@@ -4,9 +4,31 @@
 
 {% block content %}
 <div class="container">
-  <div class="col">
-    <h1>Add Images</h1>
-  </div>
+	<!-- TODO: Add navbar here -->
+	<div class="row">
+		<div class="col">
+			<!-- TODO: Add image placeholder here -->
+			Image placeholder 
+		</div>
+		<div class="col">
+      <div class="dropdown">
+        <button class="btn btn-primary dropdown-toggle" type="button" 
+                data-toggle="dropdown">Choose a Destination
+                <span class="caret"></span>
+        </button>
+        <ul class="dropdown-menu">
+          {% for destination in destinations %}
+            <li>
+              <a href='destinations/{{ destination.destination_id }}'>{{ destination.name }}</a>
+            </li>
+          {% endfor %}
+        </ul>
+      </div>
+      <!-- TODO: Add Upload Form here -->
+      Choose an Image
+      <button>Upload</button>
+		</div>
+	</div>
 </div>
 
 {% endblock %}

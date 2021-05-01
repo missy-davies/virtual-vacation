@@ -4,12 +4,39 @@
 
 {% block content %}
 <div class="container">
-  <div class="col">
-    <h1>Virtual Vacation</h1>
-    <h3>Share your best destination photos and inspire others!</h3>
-    <form action="/gallery">
-      <button class="btn btn-primary" type="submit">Let's Go!</button>
-    </form>
+  <!-- TODO: Add nav bar here -->
+  <div class="row">
+    <div class="col">
+      <!-- TODO: Add logo here -->
+      <h1>Virtual Vacation</h1>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      <div class="dropdown">
+        <button class="btn btn-primary dropdown-toggle" type="button" 
+                data-toggle="dropdown">Choose a Destination
+                <span class="caret"></span>
+        </button>
+        <ul class="dropdown-menu">
+          {% for destination in destinations %}
+            <li>
+              <a href='destinations/{{ destination.destination_id }}'>{{ destination.name }}</a>
+            </li>
+          {% endfor %}
+        </ul>
+      </div>
+      <div>
+        <!-- TODO: Add image carousel here -->
+        Image Carousel Goes Here
+      </div>
+    </div>
+    <div class="col">
+      <ul>
+        <li>Browse photo collections by destination and get inspiration for your next trip</li>
+        <li>Upload your own photos to help inspire others!</li>
+      </ul>
+    </div>
   </div>
 </div>
 
