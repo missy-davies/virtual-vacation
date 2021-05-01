@@ -31,6 +31,22 @@ class FlaskTestBasic(TestCase):
         self.assertIn(b'Share your best destination photos and inspire others', result.data)
 
 
+    def test_gallery(self):
+        """Test displaying gallery page"""
+
+        result = self.client.get('/gallery')
+        self.assertEqual(result.status_code, 200)
+        self.assertIn(b'Gallery', result.data)
+
+
+    def test_add_images(self):
+        """Test displaying add images page"""
+
+        result = self.client.get('/add')
+        self.assertEqual(result.status_code, 200)
+        self.assertIn(b'Add Images', result.data)
+
+
 #------------------------------------------------------------------#
 
 if __name__ == '__main__':

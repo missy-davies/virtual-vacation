@@ -1,80 +1,12 @@
-<html>
-	<head>
-		<title>Upload Image to PostgreSQL</title>
-		<style>
-			body {
-				background-color: #e9eccc;
-			}
-			h1 {
-				font-size: 30pt;
-			}
-			.div-main {
-				margin: auto;
-				padding-left: 10px;
-				padding-right: 10px;
-			}
-			.form-fld-caption {
-				text-align: right;
-			}
-			.form-fld-input {
-				text-align: left;
-			}
-			.form-btn-submit {
-				text-align: left;
-			}
-			.frm-btn-submit {
-				width: auto;
-				color: #cccc00;
-			}
-			.file-input {
-				width: 58px;
-				color: #ffffff;
-				background-color: #000000;
-			}
-		</style>
-	</head>
-	<body style="background-color: #e9eccc">
-		<div class="div-primary">
-			<h1>Upload Image File</h1>
-			<h2>{{msg}}</h2>
-			<form
-				action="/ImageUploader"
-				method="POST"
-				enctype="multipart/form-data"
-				id="UploadForm"
-			>
-				<div class="row">
-					<div class="form-fld-caption">Select an image</div>
-					<div class="form-fld-input">
-						<input
-							type="file"
-							class="file-input"
-							name="file_image"
-							id="file_image"
-						/>
-					</div>
-				</div>
-				<div class="row">
-					<div class="form-btn-submit">
-						<button type="submit" class="frm-btn-submit">Upload File</button>
-					</div>
-				</div>
-			</form>
-		</div>
-	</body>
-</html>
-
-
-
-<!-- {% extends 'base.html' %} 
+{% extends 'base.html' %} 
 
 {% block title %}Gallery{% endblock %} 
 
-{% block body%}
+{% block content %}
 <div class="container">
   <div class="col">
-    
+    <h1>Gallery</h1>
   </div>
 </div>
 
-{% endblock %} -->
+{% endblock %}

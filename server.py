@@ -19,6 +19,20 @@ def show_homepage():
     return render_template('home.html')
 
 
+@app.route('/gallery')
+def show_gallery():
+    """Display image gallery"""
+
+    return render_template('gallery.html')
+
+
+@app.route('/add')
+def add_images():
+    """Display page for visitors to upload images"""
+
+    return render_template('add.html')
+
+
 
 #------------------------------------------------------------------#
 
