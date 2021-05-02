@@ -3,10 +3,10 @@
 from flask import Flask, render_template, request, flash, redirect
 import jinja2
 
+from model import db, connect_to_db, Image, Destination
+
 import os
 import sys 
-
-from model import connect_to_db
 
 app = Flask(__name__)
 app.secret_key = "demosecretkey"
