@@ -4,6 +4,7 @@ from flask import Flask, render_template, request, flash, redirect
 import jinja2
 
 from model import db, connect_to_db, Image, Destination
+import crud 
 
 import os
 import sys 
@@ -16,7 +17,6 @@ app.secret_key = "demosecretkey"
 def show_homepage():
     """Display homepage"""
 
-    # TODO: Need to write crud function 
     destinations = crud.return_destinations()
     
     return render_template('home.html', destinations=destinations)

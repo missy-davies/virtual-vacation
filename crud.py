@@ -26,7 +26,10 @@ def create_image(url, destination):
     return image 
 
 
-# def return_destinations():
+def return_destinations():
+    """Return destinations"""
+
+    return model.Destination.query.all()
 
 #------------------------------------------------------------------#
 
