@@ -31,6 +31,18 @@ def return_destinations():
 
     return model.Destination.query.all()
 
+
+def get_destination_by_id(destination_id):
+    """Return destination by ID"""
+
+    return model.Destination.query.get(destination_id)
+
+
+def get_images_by_destination(destination):
+    """Return images given a destination object"""
+
+    return destination.images
+
 #------------------------------------------------------------------#
 
 if __name__ == '__main__':

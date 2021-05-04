@@ -1,12 +1,10 @@
 {% extends 'base.html' %} 
 
-<!-- {% block title %}{{ destination.name }}{% endblock %}  -->
-{% block title %}France{% endblock %} 
+{% block title %}{{ destination.name }}{% endblock %} 
 
 {% block content %}
 <div class="container">
-	<!-- TODO: Add navbar here -->
-	<h1>France</h1>
+	<h1>{{ destination.name }}</h1>
 	{% for image in destination_images %}
 		<div class="row">
 			<!-- TODO: Fix this line below -->

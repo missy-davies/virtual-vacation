@@ -12,6 +12,8 @@ import sys
 app = Flask(__name__)
 app.secret_key = "demosecretkey"
 
+# TODO: Working on uploading images functionality   
+UPLOAD_FOLDER_IMAGES = "./static/uploaded-img/"
 
 @app.route('/')
 def show_homepage():
@@ -22,11 +24,10 @@ def show_homepage():
     return render_template('home.html', destinations=destinations)
 
 
-@app.route('/destination/<destination_id>')
+@app.route('/destinations/<destination_id>')
 def show_gallery(destination_id):
     """Display page for each destination with images"""
-
-    # TODO: Need to write this crud function 
+ 
     destination = crud.get_destination_by_id(destination_id)
     destination_images = crud.get_images_by_destination(destination)
 

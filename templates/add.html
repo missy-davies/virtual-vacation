@@ -4,7 +4,6 @@
 
 {% block content %}
 <div class="container">
-	<!-- TODO: Add navbar here -->
 	<div class="row">
 		<div class="col">
 			<!-- TODO: Add image placeholder here -->
@@ -18,15 +17,19 @@
         </button>
         <ul class="dropdown-menu">
           {% for destination in destinations %}
-            <li>
-              <a href='destinations/{{ destination.destination_id }}'>{{ destination.name }}</a>
-            </li>
+            <li>{{ destination.name }}</li>
           {% endfor %}
         </ul>
       </div>
-      <!-- TODO: Add Upload Form here -->
-      Choose an Image
-      <button>Upload</button>
+      <!-- TODO: Working on form to upload images  -->
+      <div class="form-group">
+        <label>Upload</label>
+        <div class="custom-file">
+          <input type="file" class="custom-file-input" id="fileCol">
+          <label class="custom-file-label" for="fileCol">Choose an Image</label>
+        </div>
+        <button type="submit" class="btn btn-primary">Upload</button>
+      </div>
 		</div>
 	</div>
 </div>
