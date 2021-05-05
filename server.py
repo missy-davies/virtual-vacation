@@ -19,7 +19,7 @@ def show_homepage():
     """Display homepage"""
 
     destinations = crud.return_destinations()
-    
+
     return render_template('home.html', destinations=destinations)
 
 
@@ -29,7 +29,7 @@ def show_gallery(destination_id):
  
     destination = crud.get_destination_by_id(destination_id)
     destination_images = crud.get_images_by_destination(destination)
-
+    
     return render_template('destination-details.html', destination=destination,
                                                        destination_images=destination_images)
 

@@ -60,3 +60,13 @@
     min-width: 100%;
     min-height: 100%
 }
+
+/* Headers */
+
+h1 {
+	padding-top: 50px;
+}
+
+#homecarousel {
+	width: 700px;
+}
