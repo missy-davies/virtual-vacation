@@ -39,12 +39,12 @@ class FlaskTestBasic(TestCase):
         self.assertIn(b'ADD SOMETHING HERE', result.data)
         # TODO: Add text to check above 
 
-    def test_add_images(self):
-        """Test displaying add images page"""
+    def test_upload_images(self):
+        """Test displaying upload images page"""
 
-        result = self.client.get('/add')
+        result = self.client.get('/upload')
         self.assertEqual(result.status_code, 200)
-        self.assertIn(b'Add Images', result.data)
+        self.assertIn(b'Upload Images', result.data)
         # TODO: To update
 
 #------------------------------------------------------------------#

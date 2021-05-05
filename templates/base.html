@@ -2,11 +2,11 @@
 <html>
 	<head>
 		<meta charset="utf-8" />
-		<!-- Bootstrap installation -->
+		<!-- Bootstrap 4 installation -->
 		<link
-			href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css"
 			rel="stylesheet"
-			integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6"
+			href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+			integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
 			crossorigin="anonymous"
 		/>
 
@@ -44,24 +44,24 @@
 
 	<body>
 		<!-- Dark Navbar: dark bg, navbar-dark theme -->
-    <nav class="navbar navbar-expand-md navbar-dark bg-dark">
-      <a class="navbar-brand" href="/">Virtual Vacation</a>
-      <button
-        class="navbar-toggler"
-        type="button"
-        data-toggle="collapse"
-        data-target="#navExpandContent3">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="navbar-collapse collapse" id="navExpandContent3">
-        <div class="navbar-nav">
+		<nav class="navbar navbar-expand-md navbar-dark bg-dark">
+			<a class="navbar-brand" href="/">Virtual Vacation</a>
+			<button
+				class="navbar-toggler"
+				type="button"
+				data-toggle="collapse"
+				data-target="#navExpandContent3"
+			>
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="navbar-collapse collapse" id="navExpandContent3">
+				<div class="navbar-nav">
 					<a class="nav-item nav-link" href="/">Browse</a>
-          <a class="nav-item nav-link" href="/add">Add to a Collection</a>
-        </div>
-      </div>
-    </nav>
-		{% block content %}
-		{% endblock %}
+					<a class="nav-item nav-link" href="/upload">Add to a Collection</a>
+				</div>
+			</div>
+		</nav>
+		{% block content %} {% endblock %}
 		<script src="/static/js/virtualvacation.js"></script>
 	</body>
 

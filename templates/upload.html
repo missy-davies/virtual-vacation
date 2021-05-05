@@ -1,0 +1,36 @@
+{% extends 'base.html' %} 
+
+{% block title %}Upload Images to a Collection{% endblock %} 
+
+{% block content %}
+
+<div class="container">
+  <div class="row">
+    <div class="col">
+
+      <h1>Upload an image</h1>
+      <hr>
+
+      <!-- Radio Buttons to Select Destination -->
+      <form id="radiobuttons">
+        {% for destination in destinations %}
+            <input type="radio" id="{{ destination.name }}" name="destination" value="{{ destination.name }}" checked>
+            <label for="{{ destination.name }}">{{ destination.name }}</label>
+        {% endfor %}
+      </form>
+
+      <!-- Upload Form -->
+      <div class="form-group">
+        <div class="custom-file">
+          <form method=post enctype=multipart/form-data>
+            <input type=file name=file>
+            <input class="btn btn-primary" type=submit value=Upload id="upload">
+          </form>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+{% endblock %}
