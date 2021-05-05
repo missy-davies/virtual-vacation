@@ -48,14 +48,12 @@ def allowed_file(filename):
         filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
 
 
-@app.route('/save', methods=['POST'])
 def save_file():
     """Save image to database based on destination selected"""
     
-    name = request.form.get('name')
+    name = request.form.get('destination')
     destination = Destination.query.filter_by(name=name).one()
-  
-    url = request.form.get('file')
+    url = request.files['file'].filename
 
     crud.create_image(url, destination)
     db.session.commit()
@@ -81,7 +79,7 @@ def upload_file():
         if file and allowed_file(file.filename):
             filename = secure_filename(file.filename)
             file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
-            # save_file()
+            save_file()
             return redirect(url_for('upload_file', filename=filename))
 
     return render_template('upload.html', destinations=destinations)

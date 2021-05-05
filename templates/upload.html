@@ -12,22 +12,18 @@
       <hr>
 
       <!-- Radio Buttons to Select Destination -->
-      <form id="radiobuttons">
+      <form id="radiobuttons form-group" method=post enctype=multipart/form-data>
         {% for destination in destinations %}
             <input type="radio" id="{{ destination.name }}" name="destination" value="{{ destination.name }}" checked>
             <label for="{{ destination.name }}">{{ destination.name }}</label>
         {% endfor %}
-      </form>
 
-      <!-- Upload Form -->
-      <div class="form-group">
+        <!-- Upload -->
         <div class="custom-file">
-          <form method=post enctype=multipart/form-data>
-            <input type=file name=file>
-            <input class="btn btn-primary" type=submit value=Upload id="upload">
-          </form>
+          <input type="file" name="file">
+          <input class="btn btn-primary" type=submit value=Upload id="upload">
         </div>
-      </div>
+      </form>
 
     </div>
   </div>
