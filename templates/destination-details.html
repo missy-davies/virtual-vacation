@@ -7,15 +7,14 @@
 	<h1>{{ destination.name }}</h1>
 	<hr>
 	<div class="row">
-		{% for image in destination_images %}
-			<div class="col">
-				<!-- TODO: Need to fix how images are added to gallery  -->
-				<img class="uploaded img-thumbnail img-responsive mx-auto d-block"
-						src="/static/img/uploads/{{ image.url }}">
-			</div>
-		{% endfor %}
-	</div>
-
+		<div class="col">
+			{% for image in destination_images %}
+				<a href="/image/{{ image.image_id }}" data-toggle="lightbox" data-toggle="lightbox" data-gallery="gallery">
+					<img class="uploaded img-responsive box-shadow" src="/static/img/uploads/{{ image.url }}">
+				</a>
+			{% endfor %}
+		</div>
+	</div>	
 </div>
 
 {% endblock %}

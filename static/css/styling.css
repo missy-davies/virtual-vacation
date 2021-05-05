@@ -28,9 +28,35 @@
 	padding-left: 0;
 }
 
-/* TODO: Left off styling image gallery */
+/* Image Gallery Styling */
+
 .uploaded {
-	width: 250px;
-	height: 250px;
-	display: inline-flex;
+	float: left;
+    width:  250px;
+    height: 250px;
+    object-fit: cover;
+	margin: 12px;
+}
+
+.uploaded:hover {
+	box-shadow: 10px 10px 5px rgb(103, 169, 216);
+	cursor: pointer;
+}
+    
+.box-shadow {
+	box-shadow: 10px 10px 5px #808080;
+}
+
+/* Style Modal Pop Up  */
+.ekko-lightbox-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden
+}
+
+.ekko-lightbox-container img {
+    flex-shrink: 0;
+    min-width: 100%;
+    min-height: 100%
 }

@@ -85,6 +85,15 @@ def upload_file():
     return render_template('upload.html', destinations=destinations)
 
 
+@app.route('/image/<image_id>')
+def show_image(image_id):
+    """Display page for each destination with images"""
+ 
+    image_obj = Image.query.get(image_id)
+
+    return render_template('image-details.html', image_obj=image_obj)
+
+
 #------------------------------------------------------------------#
 
 if __name__ == "__main__":
