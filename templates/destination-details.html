@@ -6,13 +6,15 @@
 <div class="container">
 	<h1>{{ destination.name }}</h1>
 	<hr>
-	{% for image in destination_images %}
-		<div class="row">
-			<!-- TODO: Fix this line below -->
-			<img class="square-img"
-					src="/static/img/{{ image.url }}">
-		</div>
-	{% endfor %}
+	<div class="row">
+		{% for image in destination_images %}
+			<div class="col">
+				<!-- TODO: Need to fix how images are added to gallery  -->
+				<img class="uploaded img-thumbnail img-responsive mx-auto d-block"
+						src="/static/img/uploads/{{ image.url }}">
+			</div>
+		{% endfor %}
+	</div>
 
 </div>
 

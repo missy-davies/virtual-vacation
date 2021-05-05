@@ -28,3 +28,9 @@
 	padding-left: 0;
 }
 
+/* TODO: Left off styling image gallery */
+.uploaded {
+	width: 250px;
+	height: 250px;
+	display: inline-flex;
+}
