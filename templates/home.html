@@ -11,10 +11,8 @@
         Welcome to Virtual Vacation!
       </h1>
       <hr>
-      <ul>
-        <li>Browse photo collections by destination and get inspiration for your next trip!</li>
-        <li>Upload your own photos to help inspire others!</li>
-      </ul>
+      <h3>Browse photo collections by destination and get inspiration for your next trip!<br>
+      OR upload your own photos to help inspire others!</h3>
       <div id="homecarousel" class="carousel slide" data-ride="carousel">
         <ol class="carousel-indicators">
           <li data-target="#zero" data-slide-to="0" class="active"></li>
@@ -40,6 +38,24 @@
           <span class="carousel-control-next-icon" aria-hidden="true"></span>
           <span class="sr-only">Next</span>
         </a>
+      </div>
+      <div class="aligned">
+        <div class="dropdown">
+          <button class="btn btn-primary dropdown-toggle" type="button" 
+                  data-toggle="dropdown">Choose a Destination
+                  <span class="caret"></span>
+          </button>
+          <ul class="dropdown-menu">
+            {% for destination in destinations %}
+              <li>
+                <a href='destinations/{{ destination.destination_id }}'>{{ destination.name }}</a>
+              </li>
+            {% endfor %}
+          </ul>
+        </div>
+        <form>
+          <button class="btn btn-primary shift" type="submit" formaction="/upload">Add to a Collection</button>
+        </form>
       </div>
     </div>
   </div>

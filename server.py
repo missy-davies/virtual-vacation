@@ -40,7 +40,7 @@ ALLOWED_EXTENSIONS = {'jpeg', 'jpg', 'png'}
 app.config["UPLOAD_FOLDER"] = UPLOAD_FOLDER
 
 
-# From Flask documentation on uploading files https://flask.palletsprojects.com/en/1.1.x/patterns/fileuploads/
+# Adapted from Flask documentation on uploading files https://flask.palletsprojects.com/en/1.1.x/patterns/fileuploads/
 def allowed_file(filename):
     """Check if file type is an image and supported"""
 
