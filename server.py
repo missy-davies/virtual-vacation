@@ -35,7 +35,7 @@ def show_gallery(destination_id):
 
 
 UPLOAD_FOLDER = "./static/img/uploads"
-ALLOWED_EXTENSIONS = {'jpeg', 'jpg', 'png'}
+ALLOWED_EXTENSIONS = {'jpeg'}
 
 app.config["UPLOAD_FOLDER"] = UPLOAD_FOLDER
 
@@ -74,12 +74,15 @@ def upload_file():
         # if user does not select file, browser also
         # submit an empty part without filename
         if file.filename == '':
-            flash('No selected file')
+            flash('Please select a file')
             return redirect(request.url)
+        if not allowed_file(file.filename):
+            flash("Oops, we only support .jpeg images")
         if file and allowed_file(file.filename):
             filename = secure_filename(file.filename)
             file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
             save_file()
+            flash('Image successfully uploaded!')
             return redirect(url_for('upload_file', filename=filename))
 
     return render_template('upload.html', destinations=destinations)

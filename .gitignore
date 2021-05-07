@@ -5,3 +5,4 @@ __pycache__
 secrets.sh
 .coverage
 static/img/uploads
+htmlcov/

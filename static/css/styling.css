@@ -92,3 +92,19 @@ h1 {
 .aligned .shift {
 	margin-left: 50px;
 }
+
+/* Flashed Messages */
+
+.flash-msg {
+	position: absolute;
+	max-width: 300px;
+	height: auto;
+	padding: 10px;
+	border-radius: 3px;
+	font-size: 12pt;
+	margin: 20px;
+	border: 2px solid #bcc2d0;
+	background-color: #dee6f5;
+	color: black;
+	margin-left: 75%;
+}
