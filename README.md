@@ -11,7 +11,7 @@ Please see ![this video for a full walkthrough](LINK HERE).
 
 ## Features 
 #### Browse Images by Destination  
-Visitors can browse images by selectd destination.
+Visitors can browse images by selected destination.
 ![Browse Images](/static/img/features/browse.gif)
 
 #### Upload Images 
@@ -44,7 +44,7 @@ To download and use Virtual Vacation please follow these instructions:
 8. Finally, launch the server with `python3 server.py`
 9. Open http://localhost:5000/ to view the site!
 
-# Testing
+## Testing
 To run tests for Virtual Vacation please follow these steps: 
 
 1. Ensure you've downloaded coverage with the requirements, if not run: `pip3 install coverage`

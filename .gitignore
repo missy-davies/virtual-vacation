@@ -4,5 +4,4 @@ __pycache__
 .DS_Store
 secrets.sh
 .coverage
-static/img/uploads
 htmlcov/
