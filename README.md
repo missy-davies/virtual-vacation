@@ -7,7 +7,7 @@ their own images to a collection to inspire others.
 Virtual Vacation is built with Python Flask on the backend with a PostgreSQL database,
 and Javascript/jQuery on the frontend along with HTML/CSS and Bootstrap. 
 
-Please see ![this video for a full walkthrough](LINK HERE). 
+For a walkthrough on how to get started and run tests, please see below or watch the [video walkthrough here](https://youtu.be/UcnEG-yEbDo). 
 
 ## Features 
 #### Browse Images by Destination  
@@ -34,6 +34,7 @@ Database:
  - PostgreSQL / SQLAlchemy
 
 ## Getting Started  
+Please see this [video for a full walkthrough](https://youtu.be/UcnEG-yEbDo) on how to get started!
 To download and use Virtual Vacation please follow these instructions:
 1. In your terminal, `git clone` this repository 
 2. Navigate to the directory with `cd virtual-vacation`
